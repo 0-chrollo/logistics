@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+
+
+  
+  <style>
+    /* --- Global Resets (Optional) --- */
+
+
+    /* --- ad-card Section --- */
+    .ad-card {
+      position: relative;
+
+      padding: 1.5rem; /* Default padding for small screens */
+    }
+
+    /* Medium screens (min-width: 768px) */
+    @media (min-width: 768px) {
+      .ad-card {
+        padding: 6vh;
+      }
+    }
+
+    /* Large screens (min-width: 1024px) */
+    @media (min-width: 1024px) {
+      .ad-card {
+        padding: 4vh;
+      }
+    }
+
+    /* --- Top Box --- */
+    .top-box {
+      border:rgb(182, 205, 238) solid 3px;
+      position: relative;
+      max-width: 100%; /* ~ Tailwind's max-w-4xl */
+      margin: 0 auto;
+      text-align: center;
+      background-color: #044c9fb5; /* Black background */
+      padding: 5vh;
+      padding-bottom:4vh; /* Extra bottom padding for overlap (pb-32 => 8rem) */
+      border-radius: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.258);
+      z-index: 10;
+      margin-bottom: 4rem; /* Space before the image container starts */
+    }
+
+    @media (min-width: 768px) {
+      .top-box {
+        padding: 7vh;
+        padding-top: 2vh;
+      }
+    }
+
+    .top-box h3 {
+  
+     
+      text-transform: uppercase;
+      color: #000000; /* Gray-400 */
+      margin-bottom: 60vh;
+    }
+
+    .top-box h2 {
+      font-weight: 600;
+      color: #dcdcdc;
+      margin-bottom: 2vh;
+    }
+
+    @media (min-width: 768px) {
+      .top-box h2 {
+      font-size: 30px;
+      
+      }
+    }
+
+    .top-box p {
+      font-size: 1rem; /* text-base */
+      color: #e5e7eb; /* Gray-200 */
+      margin-bottom: 1rem;
+    }
+
+    .top-box button {
+      padding: 0.75rem 1.5rem;
+      background-color: #2563eb; /* Blue-600 */
+      color: #fff;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .top-box button:hover {
+      background-color: #1e40af; /* Blue-700 */
+    }
+
+    /* --- Image Container (Overlaps Top Box) --- */
+    .image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      margin-top: -6rem; /* Negative margin to overlap the top box */
+      z-index: 20;
+    }
+
+    /* Increase overlap on larger screens if you like */
+    @media (min-width: 768px) {
+      .image-container {
+        margin-top: -8rem; /* More overlap on medium+ screens */
+      }
+    }
+
+    .image-container img {
+      border:rgb(182, 205, 238) solid 3px;
+      width: 60%; /* 2/3 of the container width */
+      height: 24vh;
+      border-radius: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+      object-fit: cover;
+    }
+
+    /* --- Bottom Box --- */
+    .bottom-box {
+      position: relative;
+      max-width: 45vh; /* ~ Tailwind's max-w-3xl */
+      margin: 0 auto;
+      text-align: center;
+      background-color: #000; /* Black background */
+      padding: 3vh;
+      padding-top: 5vh; /* For spacing above content */
+      border-radius: 2px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      margin-top: -1.5rem; /* Overlap the image a bit */
+    }
+
+    @media (min-width: 768px) {
+      .bottom-box {
+        padding: 2vh;
+        padding-top: 4vh;
+      }
+    }
+
+    .bottom-box h4 {
+      font-size: 0.75rem; /* text-xs */
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #9ca3af; /* Gray-400 */
+      margin-bottom: 0.5rem;
+    }
+
+    .bottom-box p {
+      font-size: 1rem;
+      color: #e5e7eb; /* Gray-200 */
+    }
+
+
+
+    button {
+      margin-top: 2vh;
+      padding: 1.9vh 1.5vh;
+      background-color: #044a99d8;  /* Blue-600 */
+      color: #fff;
+      font-weight: 600;
+      border-radius: 2px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+
+  
+  /* Flex container that wraps and centers items */
+  .containing{
+    background-color: #d6dde6f0;;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center items in each row */
+    gap: 5px; /* Gap between boxes */
+  }
+
+  /* Each box: default for 3 columns */
+  .boxs {
+  background-color: #d6dde6f0;;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    /* 
+       Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+       from 100% then divide by 3. 
+    */
+    flex: 1 1 calc((100% - 20px) / 4);
+    max-width: calc((100% - 20px) / 3);
+  }
+
+  /* Tablet view: 2 columns */
+  @media (max-width: 768px) {
+    .boxs{
+      flex: 1 1 calc((100% - 50px) / 3);
+      max-width: calc((100% - 10px) / 1);
+    }
+  }
+
+  /* Mobile view: 1 column */
+  @media (max-width: 480px) {
+    .boxs{
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="containing">
+  
+    <!-- Ad Card Section -->
+    <section class="boxs">
+      <!-- Top Box -->
+      <div class="top-box">
+     
+        <h2>Wide Range of Courses</h2>
+
+      </div>
+  
+      <!-- Image (Overlaps the Top Box) -->
+      <div class="image-container">
+        <img
+          src="logistic3.jpg"
+          alt="T"
+        >
+      </div>
+  
+      <!-- Bottom Box -->
+      <div class="bottom-box">
+        <h4>Our Mission</h4>
+        <p>
+          We provide training for various courses, including forklifts, cranes, and excavators. Our courses cater to beginners and professionals alike. </p>
+        <button>Diverse Courses</button>
+
+      </div>
+    </section>
+    <!-- End of Ad Card Section -->
+    <section class="boxs">
+      <!-- Top Box -->
+      <div class="top-box">
+     
+        <h2>Accredited Training</h2>
+
+      </div>
+  
+      <!-- Image (Overlaps the Top Box) -->
+      <div class="image-container">
+        <img
+          src="1000012918.webp"
+          alt="Tiger in the wild"
+        >
+      </div>
+  
+      <!-- Bottom Box -->
+      <div class="bottom-box">
+        <h4>Our Mission</h4>
+        <p>
+          Cedar Business Consultancy is fully accredited with SETAs such as MQA, TETA, CETA, and UMALUSI. Our certifications ensure the highest training standards.</p>
+        <button>Certified Training</button>
+
+      </div>
+    </section>
+
+      <!-- Ad Card Section -->
+      <section class="boxs">
+        <!-- Top Box -->
+        <div class="top-box">
+       
+          <h2>Advanced Equipment</h2>
+      
+        </div>
+      
+        <!-- Image (Overlaps the Top Box) -->
+        <div class="image-container">
+          <img
+            src="logistic1.jpg"
+            alt="Tiger in the wild"
+          >
+        </div>
+      
+        <!-- Bottom Box -->
+        <div class="bottom-box">
+          <h4>Our Mission</h4>
+          <p>
+            Our facilities are equipped with modern machinery and tools to provide trainees with hands-on experience using the latest industry-leading training resources.</p>
+          <button>Modern Labs</button>
+      
+        </div>
+      </section>
+      <!-- End of Ad Card Section -->
+<br>
+<section class="boxs">
+        <!-- Top Box -->
+        <div class="top-box">
+       
+          <h2>CV Revamping</h2>
+  
+        </div>
+    
+        <!-- Image (Overlaps the Top Box) -->
+        <div class="image-container">
+          <img
+            src="1000012920.webp"
+            alt="Tiger in the wild">
+        </div>
+    
+        <!-- Bottom Box -->
+        <div class="bottom-box">
+          <h4>Our Mission</h4>
+          <p>
+            We also assist trainees in revamping their old CVs to improve their job prospects. Our experts help refine resumes to meet industry standards.Enhance your CV to stand out in the competitive job market.</p>
+          <button>CV Upgrade</button>
+  
+        </div>
+      </section>
+
+
+
+<section class="boxs">
+  <!-- Top Box -->
+  <div class="top-box">
+ 
+    <h2>Safety First</h2>
+
+  </div>
+
+  <!-- Image (Overlaps the Top Box) -->
+  <div class="image-container">
+    <img
+      src="1000012918.webp"
+      alt="Tiger in the wild">
+  </div>
+
+  <!-- Bottom Box -->
+  <div class="bottom-box">
+    <h4>Our Mission</h4>
+    <p>
+      At Cedar Business Consultancy, we emphasize safe operating habits for all trainees. Our programs include risk assessments and best practices.We prioritize creating a secure and responsible work environment.</p>
+    <button>Safety Focus</button>
+
+
+</section>
+ 
+
+
+
+</body>
+</html>

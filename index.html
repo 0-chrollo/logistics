@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--[SEO optiomization section]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>Finance and Loans| Gqeberha</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script> 
+
+    <!--[SEO optiomization section]-->
+    <meta title="SEO" description="Search Engine Wording">
+
+     <!--[SEO optiomization section]-->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="Tmlogo.png" style="filter: none; ">
+        <ul>          
+            <li><a href="apply.html"><i class="fas fa-paper-plane" style="color:   rgb(244, 227, 227);"></i> Apply Now </a></li>
+            <li><a href="#requirements"><i class="fas fa-clone" style="color:   rgb(244, 227, 227);"></i> Requirements</a></li>
+            
+            <li><a href="#location"><i class="fa-solid fa-location-dot" style="color:  rgb(244, 227, 227);"></i> Location</a></li>
+           
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <div class="menu" id="menu">
+        <ul class="mobiles">        
+            <a href="apply.html"><i class="fas fa-paper-plane" style="color:   rgb(244, 227, 227);"></i> Apply Now</a></li>
+            <a href="#requirements"><i class="fas fa-clone" style="color:   rgb(244, 227, 227);"></i> Requirements</a></li>
+            
+            <a href="#location"><i class="fa-solid fa-location-dot" style="color:  rgb(244, 227, 227);"></i> Location</a></li>
+       
+        </ul>
+    </div>
+
+    <style>
+        
+
+        .header-container {
+            min-height: 75vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+                        url(logistic2.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 0rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .slides-container {
+           
+            width: 100%;
+            max-width: 1200px;
+            margin: 2px auto;
+            padding: 2rem;
+            position:relative;
+           
+            padding-bottom: 80px;
+        }
+
+        .slide {
+            position: absolute;
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 800px;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+
+        .slide h1 {
+            font-size: 3.5rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .highlight {
+            color: #3E92CC;
+        }
+
+        .slide p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .indicators-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .indicators {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .indicator {
+            width: 40px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #1f99ef;
+            width: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+                align-items: flex-start;
+            }
+
+            .slides-container {
+                padding: 1rem;
+                margin-top:  20vh;
+            }
+
+            .slide h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .slide p {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .indicator {
+                width: 30px;
+                height: 3px;
+            }
+
+            .indicator.active {
+                width: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide h1 {
+                font-size: 1.8rem;
+            }
+
+            .slide p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+    <header class="header-container">
+        <div class="slides-container">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <h1>Transform Your Business with <span class="highlight">Smart Logic</span></h1>
+                <p>We deliver <span class="highlight">custom software solutions</span> that streamline operations and boost efficiency through intelligent automation.</p>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="slide">
+                <h1><span class="highlight">Secure Infrastructure</span> for Modern Needs</h1>
+                <p>Enterprise-grade security meets agile development in our <span class="highlight">cloud-based solutions</span>, ensuring scalability and reliability.</p>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="slide">
+                <h1>Data-Driven <span class="highlight">Decision Making</span></h1>
+                <p>Harness the power of <span class="highlight">AI analytics</span> and real-time reporting to make informed business decisions faster.</p>
+            </div>
+
+            <div class="slide">
+                <h1>Data-Driven <span class="highlight">Amry Generating and Making</span></h1>
+                <p>Harness the power of <span class="highlight">AI analytics</span> and real-time reporting to make informed business decisions faster.</p>
+            </div>
+            <!-- Indicators Container -->
+            <div class="indicators-container">
+                <div class="indicators">
+                    <div class="indicator active"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function showSlide(n) {
+            // Remove active classes
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Update current slide
+            currentSlide = (n + slides.length) % slides.length;
+            
+            // Add active classes
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        // Indicator click handlers
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(index);
+                slideInterval = setInterval(nextSlide, 5000);
+            });
+        });
+    </script>
+</div>
+
+
+
+
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1, h2, h3, h4, h5 {
+      margin: 0;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 10px 20px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Showcase Section */
+    #showcase h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #showcase h1 span {
+      color:  #105384;
+      font-size: 30px;
+    }
+
+    /* Image Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 15px;
+    
+    }
+
+    .grid img {
+        border: solid 2px #166eac86;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .grid img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background-color: white;
+      max-width: 80%;
+      margin: auto;
+     
+    }
+
+    .modal img {
+      width: 100%;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      color: white;
+      background-color: black;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .modal-content {
+        max-width: 90%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+
+<!-- Main Content -->
+<div class="main-content" style="margin-top: -1vh;">
+
+  <!-- Showcase Section -->
+  <section id="showcase">
+    <div class="section-header">
+        <img src="Tmlogo.png" style=" inline-size:9vh;"><h1> <span>Logistics & - Construction</span> <span style="color: black; font-size: 17px;">The Friendly Movers</span></h1>
+      <hr style="width:90px;border:5px solid  #105384;" class="w3-round">
+    </div>
+    <div class="grid">
+      <img src="logistic5.jpg" alt="Concrete meets bricks" onclick="openModal(this)">
+      <img src="logistic4.jpg" alt="Light, white and tight scandinavian design" onclick="openModal(this)">
+        <img src="logistic2.jpg" alt="Windows for the atrium" onclick="openModal(this)">
+      <img src="logistic3.jpg" alt="Bedroom and office in one space" onclick="openModal(this)">
+   </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-header">
+      <h1><span>Our</span> Services</h1>
+      <hr style="width:50px;border:5px solid #e74c3c" class="w3-round">
+    </div>
+    <style>
+        /* --- Global Resets (Optional) --- */
+    
+    
+        /* --- ad-card Section --- */
+        .ad-card {
+          position: relative;
+    
+          padding: 1.5rem; /* Default padding for small screens */
+        }
+    
+        /* Medium screens (min-width: 768px) */
+        @media (min-width: 768px) {
+          .ad-card {
+            padding: 6vh;
+          }
+        }
+    
+        /* Large screens (min-width: 1024px) */
+        @media (min-width: 1024px) {
+          .ad-card {
+            padding: 4vh;
+          }
+        }
+    
+        /* --- Top Box --- */
+        .top-box {
+          border:rgb(182, 205, 238) solid 3px;
+          position: relative;
+          max-width: 100%; /* ~ Tailwind's max-w-4xl */
+          margin: 0 auto;
+          text-align: center;
+          background-color:  #105384; /* Black background */
+          padding: 5vh;
+          padding-bottom:4vh; /* Extra bottom padding for overlap (pb-32 => 8rem) */
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.258);
+          z-index: 10;
+          margin-bottom: 4rem; /* Space before the image container starts */
+        }
+    
+        @media (min-width: 768px) {
+          .top-box {
+            padding: 7vh;
+            padding-top: 2vh;
+          }
+        }
+    
+        .top-box h3 {
+      
+         
+          text-transform: uppercase;
+          color: #000000; /* Gray-400 */
+          margin-bottom: 60vh;
+        }
+    
+        .top-box h2 {
+          font-weight: 600;
+          color: #dcdcdc;
+          margin-bottom: 2vh;
+        }
+    
+        @media (min-width: 768px) {
+          .top-box h2 {
+          font-size: 30px;
+          
+          }
+        }
+    
+        .top-box p {
+          font-size: 1rem; /* text-base */
+          color: #e5e7eb; /* Gray-200 */
+          margin-bottom: 1rem;
+        }
+    
+        .top-box button {
+          padding: 0.75rem 1.5rem;
+          background-color: #2563eb; /* Blue-600 */
+          color: #fff;
+          font-weight: 600;
+          border-radius: 0.5rem;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+    
+        .top-box button:hover {
+          background-color: #1e40af; /* Blue-700 */
+        }
+    
+        /* --- Image Container (Overlaps Top Box) --- */
+        .image-container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          margin-top: -6rem; /* Negative margin to overlap the top box */
+          z-index: 20;
+        }
+    
+        /* Increase overlap on larger screens if you like */
+        @media (min-width: 768px) {
+          .image-container {
+            margin-top: -8rem; /* More overlap on medium+ screens */
+          }
+        }
+    
+        .image-container img {
+          border:rgb(182, 205, 238) solid 3px;
+          width: 60%; /* 2/3 of the container width */
+          height: 24vh;
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
+          object-fit: cover;
+        }
+    
+        /* --- Bottom Box --- */
+        .bottom-box {
+          position: relative;
+          max-width: 45vh; /* ~ Tailwind's max-w-3xl */
+          margin: 0 auto;
+          text-align: center;
+          background-color:  #105384; /* Black background */
+          padding: 3vh;
+          padding-top: 5vh; /* For spacing above content */
+          border-radius: 2px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          z-index: 10;
+          margin-top: -1.5rem; /* Overlap the image a bit */
+        }
+    
+        @media (min-width: 768px) {
+          .bottom-box {
+            padding: 2vh;
+            padding-top: 4vh;
+          }
+        }
+    
+        .bottom-box h4 {
+          font-size: 0.75rem; /* text-xs */
+          font-weight: 600;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: #9ca3af; /* Gray-400 */
+          margin-bottom: 0.5rem;
+        }
+    
+        .bottom-box p {
+          font-size: 1rem;
+          color: #e5e7eb; /* Gray-200 */
+        }
+    
+    
+    
+        button {
+          margin-top: 2vh;
+          padding: 1.9vh 1.5vh;
+          background-color:  #ffffff; /* Blue-600 */
+          color:  #105384;
+          font-weight: 600;
+          border-radius: 2px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.2s;
+        }
+    
+    
+      
+      /* Flex container that wraps and centers items */
+      .containing{
+     
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Center items in each row */
+        gap: 5px; /* Gap between boxes */
+      }
+    
+      /* Each box: default for 3 columns */
+      .boxs {
+     
+   
+        padding: 30px;
+        text-align: center;
+        font-size: 1.2em;
+        /* 
+           Calculate width: For 3 boxes per row, subtract the total horizontal gap (2 * 10px)
+           from 100% then divide by 3. 
+        */
+        flex: 1 1 calc((100% - 20px) / 4);
+        max-width: calc((100% - 20px) / 3);
+      }
+    
+      /* Tablet view: 2 columns */
+      @media (max-width: 768px) {
+        .boxs{
+          flex: 1 1 calc((100% - 50px) / 3);
+          max-width: calc((100% - 10px) / 1);
+        }
+      }
+    
+      /* Mobile view: 1 column */
+      @media (max-width: 480px) {
+        .boxs{
+          flex: 1 1 100%;
+          max-width: 100%;
+        }
+      }
+    </style>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="containing">
+      
+        <!-- Ad Card Section -->
+        <section class="boxs">
+          <!-- Top Box -->
+          <div class="top-box">
+         
+            <h2>Wide Range of Courses</h2>
+    
+          </div>
+      
+          <!-- Image (Overlaps the Top Box) -->
+          <div class="image-container">
+            <img
+              src="logistic3.jpg"
+              alt="T"
+            >
+          </div>
+      
+          <!-- Bottom Box -->
+          <div class="bottom-box">
+            <h4>Our Mission</h4>
+            <p>
+              We provide training for various courses, including forklifts, cranes, and excavators. Our courses cater to beginners and professionals alike. </p>
+            <button>Diverse Courses</button>
+    
+          </div>
+        </section>
+        <!-- End of Ad Card Section -->
+        <section class="boxs">
+          <!-- Top Box -->
+          <div class="top-box">
+         
+            <h2>Accredited Training</h2>
+    
+          </div>
+      
+          <!-- Image (Overlaps the Top Box) -->
+          <div class="image-container">
+            <img
+              src="1000012918.webp"
+              alt="Tiger in the wild"
+            >
+          </div>
+      
+          <!-- Bottom Box -->
+          <div class="bottom-box">
+            <h4>Our Mission</h4>
+            <p>
+              Cedar Business Consultancy is fully accredited with SETAs such as MQA, TETA, CETA, and UMALUSI. Our certifications ensure the highest training standards.</p>
+            <button>Certified Training</button>
+    
+          </div>
+        </section>
+    
+          <!-- Ad Card Section -->
+          <section class="boxs">
+            <!-- Top Box -->
+            <div class="top-box">
+           
+              <h2>Advanced Equipment</h2>
+          
+            </div>
+          
+            <!-- Image (Overlaps the Top Box) -->
+            <div class="image-container">
+              <img
+                src="logistic1.jpg"
+                alt="Tiger in the wild"
+              >
+            </div>
+          
+            <!-- Bottom Box -->
+            <div class="bottom-box">
+              <h4>Our Mission</h4>
+              <p>
+                Our facilities are equipped with modern machinery and tools to provide trainees with hands-on experience using the latest industry-leading training resources.</p>
+              <button>Modern Labs</button>
+          
+            </div>
+          </section>
+          <!-- End of Ad Card Section -->
+    <br>
+    <section class="boxs">
+            <!-- Top Box -->
+            <div class="top-box">
+           
+              <h2>CV Revamping</h2>
+      
+            </div>
+        
+            <!-- Image (Overlaps the Top Box) -->
+            <div class="image-container">
+              <img
+                src="1000012920.webp"
+                alt="Tiger in the wild">
+            </div>
+        
+            <!-- Bottom Box -->
+            <div class="bottom-box">
+              <h4>Our Mission</h4>
+              <p>
+                We also assist trainees in revamping their old CVs to improve their job prospects. Our experts help refine resumes to meet industry standards.Enhance your CV to stand out in the competitive job market.</p>
+              <button>CV Upgrade</button>
+      
+            </div>
+          </section>
+    
+    
+    
+    <section class="boxs">
+      <!-- Top Box -->
+      <div class="top-box">
+     
+        <h2>Safety First</h2>
+    
+      </div>
+    
+      <!-- Image (Overlaps the Top Box) -->
+      <div class="image-container">
+        <img
+          src="1000012918.webp"
+          alt="Tiger in the wild">
+      </div>
+    
+      <!-- Bottom Box -->
+      <div class="bottom-box">
+        <h4>Our Mission</h4>
+        <p>
+          At Cedar Business Consultancy, we emphasize safe operating habits for all trainees. Our programs include risk assessments and best practices.We prioritize creating a secure and responsible work environment.</p>
+        <button>Safety Focus</button>
+    
+    </div>
+    </section>
+    </div>
+</div>
+
+
+     
+
+<script>
+  // Modal functions
+  function openModal(img) {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("modalImg").src = img.src;
+  }
+
+  function closeModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+
+
+
+
+
+
+
+
+<style>
+    footer {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #105384;
+      color: #fff;
+      padding: 10px 0;
+    }
+    
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+  
+    .footer-section {
+      flex: 1;
+      margin: 0 10px;
+      padding: 5px;
+    }
+    
+    .lined {
+      font-size: 19px;
+      margin-bottom: 15px;
+      position: relative;
+    }
+    
+    .lined::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background-color: #5884a3;
+      width: 6ch;
+      margin-top: 8px;
+    }
+    
+    .footer-section ul {
+      font-size:13px;
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-section li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-section a {
+      text-decoration: none;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-section a:hover {
+      color: #00bcd4;
+    }
+    </style>
+  
+  
+  
+  
+  
+  
+  
+  <p id="location"></p>
+  
+  
+  
+  
+    
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4 class="lined">Links</h4>
+              <ul>
+                  <li><a href="courses.html">Courses</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                 
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4 class="lined">Contact</h4>
+              <ul>
+                  
+                  <li>Call</li>
+                  <li>Whatsapp</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4 class="lined">Courses</h4>
+              <ul>
+                <li><a href="#">Forklift</a></li>
+                <li><a href="#">Petrol Attendance</a></li>
+                <li><a href="#">Cashier</a></li>
+                <li><a href="#">Crane</a></li>
+                <li><a href="#">Reach Truck</a></li>
+                <li><a href="courses.html" style="color: #d0dfed;font-size: 17px;">view All....</a></li>
+              </ul>
+          </div>
+      </div>
+      <p align="center" style="font-size:12px; padding: 10px;"> &copy; 2025 TM Logistics & Construction. All Rights Reserved.
+         Powered by <a href="#" style="color: #d0cdcd; font-size: 11px;">Lucas </a></p>
+    </footer>
+  
+  
+</body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
