@@ -46,11 +46,11 @@
 
         .header-container {
             min-height: 75vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-                        url(logistic2.jpg);
+            background: linear-gradient(rgba(1, 16, 40, 0.779), rgba(0, 0, 0, 0.5)),
+                        url(Scr.jpg);
             background-size: cover;
             background-position: center;
-            padding: 0rem;
+            padding: 3rem;
             display: flex;
             align-items: center;
         }
@@ -369,10 +369,148 @@
 
   <!-- Services Section -->
   <section id="services">
-    <div class="section-header">
-      <h1><span>Our</span> Services</h1>
-      <hr style="width:50px;border:5px solid #e74c3c" class="w3-round">
+    <div class="section-header"></br>
+      <h1><span>Our</span> <span style="color: #105384;"> Services</span></h1></br>
+      <hr style="width:75px;border:5px solid #105384;" class="w3-round">
     </div>
+
+
+
+
+
+    <style>
+
+
+        .services-container {
+            display: grid;
+            grid-template-columns: 2fr;
+            gap: 10px;
+            padding: 10px;
+            max-width: 1350px;
+            margin: auto;
+        }
+      
+        .service {
+            font-size: 18px;
+            font-weight: 500;
+            padding: 50px;
+           
+            box-shadow: 0 4px 10px rgba(154, 154, 154, 0.126);
+            border-radius: 3px;
+            position: relative;
+            line-height: 1.9;
+        }
+      
+        .service i {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #105384;
+        }
+      
+        .service {
+          font-size: 22px;
+          padding: 15px 22px;
+            border-radius: 4px;
+        }
+        .tm-role{
+          font-size: 28px;
+          padding: 10px 20px;
+          color: #105384;
+        }
+        .service p {
+            font-size: 17px;
+            color: #333;
+            margin-top: 10px;
+        }
+      
+        .highlight {
+            color: #105384;
+            font-weight: bold;
+        }
+      
+        .service::after {
+            content: "";
+            display: block;
+            width: 50%;
+            height: 3px;
+            background: #105384;
+            margin-top: 15px;
+            border-radius: 3px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      
+        /* Responsive for Medium Devices */
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+      
+        /* Responsive for Small Devices */
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+      
+            .service i {
+                font-size: 30px;
+            }
+        }
+      
+        /* Large Devices for 3x3 Layout */
+        @media (min-width: 1200px) {
+            .services-container {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+            }
+      
+            .service {
+                padding: 25px;
+                font-size: 18px;
+            }
+      
+            .service i {
+                font-size: 40px;
+            }
+        }
+      </style>
+      
+      <div class="services-container">
+      <div class="service">
+        <i class="fas fa-truck-moving"></i>
+        <span class="tm-role">Reliable Moving</span>
+        <p>Our team offers <span class="highlight">efficient and trustworthy moving</span> services, ensuring that your belongings are transported with the utmost care. Whether it’s across town or across the country, we’ve got you covered. Trust TM Logistics to handle your move smoothly from start to finish, with no hassle and no delays.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-shipping-fast"></i>
+        <span class="tm-role">Speedy Deliveries</span>
+        <p>We specialize in <span class="highlight">on-time deliveries</span> that ensure your goods reach their destination quickly and securely. Whether you're sending a package locally or nationally, we guarantee <span class="highlight">fast, reliable service</span> that fits your schedule. Rest easy knowing that your items will always be delivered on time and in perfect condition.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-box"></i>
+        <span class="tm-role">Secure Parcel Collection</span>
+        <p>We offer a simple and reliable <span class="highlight">parcel collection service</span> that ensures your items are picked up quickly and safely. Whether it’s a single package or multiple items, our dedicated team will handle everything with professionalism. We ensure your parcels are always collected promptly, and we offer flexible timing to suit your needs.</p>
+      </div>
+      <div class="service">
+        <i class="fas fa-boxes"></i>
+        <span class="tm-role">Professional Packaging</span>
+        <p>Protect your belongings with our <span class="highlight">top-notch packaging services</span>. Whether you're shipping fragile items, electronics, or bulky goods, we use high-quality materials and expert techniques to ensure everything arrives intact. Our packaging service ensures that your items are packed securely and safely for any journey.</p>
+      </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
     <style>
         /* --- Global Resets (Optional) --- */
     
@@ -401,8 +539,8 @@
         /* --- Top Box --- */
         .top-box {
           border:rgb(182, 205, 238) solid 3px;
-          position: relative;
-          max-width: 100%; /* ~ Tailwind's max-w-4xl */
+         
+          max-width: 100vh; /* ~ Tailwind's max-w-4xl */
           margin: 0 auto;
           text-align: center;
           background-color:  #105384; /* Black background */
@@ -482,8 +620,8 @@
     
         .image-container img {
           border:rgb(182, 205, 238) solid 3px;
-          width: 60%; /* 2/3 of the container width */
-          height: 24vh;
+          width: 80%; /* 2/3 of the container width */
+          height: 22vh;
           border-radius: 2px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.322);
           object-fit: cover;
@@ -492,7 +630,7 @@
         /* --- Bottom Box --- */
         .bottom-box {
           position: relative;
-          max-width: 45vh; /* ~ Tailwind's max-w-3xl */
+          max-width: 55vh; /* ~ Tailwind's max-w-3xl */
           margin: 0 auto;
           text-align: center;
           background-color:  #105384; /* Black background */
@@ -555,7 +693,7 @@
       .boxs {
      
    
-        padding: 30px;
+        padding: 10px;
         text-align: center;
         font-size: 1.2em;
         /* 
@@ -611,7 +749,7 @@
           <!-- Image (Overlaps the Top Box) -->
           <div class="image-container">
             <img
-              src="logistic3.jpg"
+              src="transport2.jpg"
               alt="T"
             >
           </div>
@@ -637,7 +775,7 @@
           <!-- Image (Overlaps the Top Box) -->
           <div class="image-container">
             <img
-              src="1000012918.webp"
+              src="1000013188-ezgif.com-optijpeg.jpg"
               alt="Tiger in the wild"
             >
           </div>
@@ -664,7 +802,7 @@
             <!-- Image (Overlaps the Top Box) -->
             <div class="image-container">
               <img
-                src="logistic1.jpg"
+                src="Screenshot_20250307_190622_Gallery.jpg"
                 alt="Tiger in the wild"
               >
             </div>
@@ -691,7 +829,7 @@
             <!-- Image (Overlaps the Top Box) -->
             <div class="image-container">
               <img
-                src="1000012920.webp"
+                src="transport1.jpg"
                 alt="Tiger in the wild">
             </div>
         
@@ -705,32 +843,11 @@
             </div>
           </section>
     
-    
-    
-    <section class="boxs">
-      <!-- Top Box -->
-      <div class="top-box">
-     
-        <h2>Safety First</h2>
-    
-      </div>
-    
-      <!-- Image (Overlaps the Top Box) -->
-      <div class="image-container">
-        <img
-          src="1000012918.webp"
-          alt="Tiger in the wild">
-      </div>
-    
-      <!-- Bottom Box -->
-      <div class="bottom-box">
-        <h4>Our Mission</h4>
-        <p>
-          At Cedar Business Consultancy, we emphasize safe operating habits for all trainees. Our programs include risk assessments and best practices.We prioritize creating a secure and responsible work environment.</p>
-        <button>Safety Focus</button>
-    
     </div>
-    </section>
+  </section>
+</div>
+
+  
     </div>
 </div>
 
@@ -864,7 +981,22 @@
   
 </body>
 
-</body>
+<!--Contact-Widgets-->
+<div class="fixed-widgets">
+    <a href="https://wa.me/27655035056" target="_blank" class="whatsapp-widget">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+27655035056" class="call-widget">
+        <i class="fas fa-phone-alt"></i>
+    </a>
+</div>
+<!--Contact-Widgets-->
+
+
+
+
+
+
 </html>
 
 

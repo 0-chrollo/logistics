@@ -371,6 +371,127 @@
 </section>
  
 
+<style>
+
+
+  .services-container {
+      display: grid;
+      grid-template-columns: 2fr;
+      gap: 10px;
+      padding: 10px;
+      max-width: 1350px;
+      margin: auto;
+  }
+
+  .service {
+      font-size: 18px;
+      font-weight: 500;
+      padding: 50px;
+     
+      box-shadow: 0 4px 10px rgba(63, 63, 63, 0.1);
+      border-radius: 3px;
+      position: relative;
+      line-height: 1.9;
+  }
+
+  .service i {
+      font-size: 30px;
+      margin-right: 15px;
+      color: #007BFF;
+  }
+
+  .service {
+    font-size: 22px;
+    padding: 15px 22px;
+      border-radius: 4px;
+  }
+  .tm-role{
+    font-size: 28px;
+    padding: 10px 20px;
+    
+  }
+  .service p {
+      font-size: 17px;
+      color: #333;
+      margin-top: 10px;
+  }
+
+  .highlight {
+      color: #007BFF;
+      font-weight: bold;
+  }
+
+  .service::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 3px;
+      background: #007BFF;
+      margin-top: 15px;
+      border-radius: 3px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  /* Responsive for Medium Devices */
+  @media (max-width: 1024px) {
+      .services-container {
+          grid-template-columns: 1fr 1fr;
+      }
+  }
+
+  /* Responsive for Small Devices */
+  @media (max-width: 768px) {
+      .services-container {
+          grid-template-columns: 1fr;
+      }
+
+      .service i {
+          font-size: 30px;
+      }
+  }
+
+  /* Large Devices for 3x3 Layout */
+  @media (min-width: 1200px) {
+      .services-container {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 15px;
+      }
+
+      .service {
+          padding: 25px;
+          font-size: 18px;
+      }
+
+      .service i {
+          font-size: 40px;
+      }
+  }
+</style>
+
+<div class="services-container">
+<div class="service">
+  <i class="fas fa-truck-moving"></i>
+  <span class="tm-role">Reliable Moving</span>
+  <p>Our team offers <span class="highlight">efficient and trustworthy moving</span> services, ensuring that your belongings are transported with the utmost care. Whether it’s across town or across the country, we’ve got you covered. Trust TM Logistics to handle your move smoothly from start to finish, with no hassle and no delays.</p>
+</div>
+<div class="service">
+  <i class="fas fa-shipping-fast"></i>
+  <span class="tm-role">Speedy Deliveries</span>
+  <p>We specialize in <span class="highlight">on-time deliveries</span> that ensure your goods reach their destination quickly and securely. Whether you're sending a package locally or nationally, we guarantee <span class="highlight">fast, reliable service</span> that fits your schedule. Rest easy knowing that your items will always be delivered on time and in perfect condition.</p>
+</div>
+<div class="service">
+  <i class="fas fa-box"></i>
+  <span class="tm-role">Secure Parcel Collection</span>
+  <p>We offer a simple and reliable <span class="highlight">parcel collection service</span> that ensures your items are picked up quickly and safely. Whether it’s a single package or multiple items, our dedicated team will handle everything with professionalism. We ensure your parcels are always collected promptly, and we offer flexible timing to suit your needs.</p>
+</div>
+<div class="service">
+  <i class="fas fa-boxes"></i>
+  <span class="tm-role">Professional Packaging</span>
+  <p>Protect your belongings with our <span class="highlight">top-notch packaging services</span>. Whether you're shipping fragile items, electronics, or bulky goods, we use high-quality materials and expert techniques to ensure everything arrives intact. Our packaging service ensures that your items are packed securely and safely for any journey.</p>
+</div>
+</div>
+
 
 
 </body>
